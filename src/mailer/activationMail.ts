@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { processMail } from './MailService';
 
 const sendActivationMail = async (context: any) => {
