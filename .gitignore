@@ -1,0 +1,13 @@
+node_modules
+dist
+logs
+.vscode
+node_modules
+coverage
+jest.config.js
+.env.development
+.env.production
+.env
+package-lock.json
+.DS_Store
+.env
