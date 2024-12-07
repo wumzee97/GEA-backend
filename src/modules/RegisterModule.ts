@@ -8,7 +8,7 @@ import School from '../models/school.model';
 import Role from '../models/role.model';
 import { v4 as uuidv4 } from 'uuid';
 import { generateRandomString } from '../utils/Helpers';
-import { sendActivationMail } from '../mailer/ActivationMail';
+import { sendActivationMail } from '../mailer/activationMail';
 import { EmailOptions } from '../mailer/interface/EmailOptions';
 import { SuccessResponse, ErrorResponse } from '../utils/Response';
 import moment from 'moment';
