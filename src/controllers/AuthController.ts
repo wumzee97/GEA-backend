@@ -12,8 +12,5 @@ export default class AuthController {
     return response;
   });
 
-  dashboard = asyncWrapper(async (req: Request) => {
-    const response = await this.requestModule.dashboardRequest(req);
-    return response;
-  });
+
 }

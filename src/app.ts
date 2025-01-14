@@ -68,6 +68,7 @@ app.set('trust proxy', true);
 app.disable('etag');
 
 //set routes
+
 app.use('/secure/v1', routes);
 
 // Serve Swagger UI

@@ -78,11 +78,12 @@ const loginController = Container.get(LoginController);
  *       500:
  *         description: Internal server error
  */
+router.get('/', registerController.blank )
 router.get('/auth/google/signup', registerController.googleSignUp)
 router.get('/auth/google/signup/callback', registerController.googleSignUpCallback)
 router.get('/auth/google/login', registerController.googleSignIn)
 router.get('/auth/google/login/callback', registerController.googleSignInCallback)
-router.post('/register/parent', registerController.register)
+router.post('/register', registerController.register)
 router.post('/register/parent/update-profile', registerController.updateParentProfile)
 router.post('/register/parent/add-children', registerController.addChildren)
 router.post('/login', RequestValidator.validate(LoginRequest), loginController.login);

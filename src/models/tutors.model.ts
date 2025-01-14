@@ -11,11 +11,11 @@ export interface ITutor extends Document {
 const TutorSchema: Schema = new mongoose.Schema({
   firstName: {
     type: String,
-    required: true, // Must be provided
+    default: '', // If not provided, defaults to an empty string
   },
   lastName: {
     type: String,
-    required: true, // Must be provided
+    default: '', // If not provided, defaults to an empty string
   },
   email: {
     type: String,

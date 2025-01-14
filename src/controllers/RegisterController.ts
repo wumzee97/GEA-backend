@@ -4,10 +4,17 @@ import { asyncWrapper } from '../utils/AsyncWrapper';
 import { Service } from 'typedi';
 import RegisterModule from '../modules/RegisterModule';
 import passport from 'passport';
+import { SuccessResponse } from '../utils';
 
 @Service()
 export default class RegisterController {
   constructor(public requestModule: RegisterModule) {}
+
+  blank = (req: Request, res: Response) => {
+    return new SuccessResponse({
+      message: 'Welcome to GEA API'
+    })
+  }
 
   googleSignUp = (req: Request, res: Response, next: NextFunction) => {
     const { type } = req.query;
@@ -84,8 +91,8 @@ export default class RegisterController {
   };
 
   register = asyncWrapper(async (req: Request) => {
-    const { email, password } = req.body;
-    const response = await this.requestModule.registerRequest(email, password);
+    const { email, password,type } = req.body;
+    const response = await this.requestModule.registerRequest(email, password,type);
     return response;
   });
 

@@ -28,6 +28,6 @@ const authController = Container.get(AuthController);
  *                     type: string
  */
 router.get('/profile', authController.profile);
-router.get('/dashboard', authController.dashboard);
+
 
 export default router;
